@@ -204,7 +204,6 @@ if __name__ == "__main__":
     sprawdz_token(user_token,'twitch')
     sprawdz_token(identity['SPOTIFY']['access_token'],'spotify')
     bot = Bot()
-    bot.update_komendy()
     tokenRefreshProcess.start()
     print(f"Logowanie do kanalu {INITIAL_CHANNELS[0]}...")
     bot.run()
