@@ -33,10 +33,9 @@ def chatgpt(msg):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=msg,
-        max_tokens=900,
+        max_tokens=2500,
         n=1,
-        stop="",
-        temperature=0.93,
+        temperature=0.90,
     )
     odpowiedz = response.choices[0].message.content
     return odpowiedz
