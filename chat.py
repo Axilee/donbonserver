@@ -21,7 +21,7 @@ def obraz(prompt):
 
 def tytul(prompt):
     msg = [
-        {"role": "system", "content": "You are an assistant that creates funny and creative titles for twitch streams You are to create a title for a streamer. The user will list the different separate games or events the stream will contain. The title should be written in native polish. It has to be stupid. Use a polish pun, if possible.  Do you understand?"},
+        {"role": "system", "content": "You are an assistant that creates funny and creative titles for twitch streams You are to create a title for a streamer. The user will list the different separate games or events the stream will contain. The title should be written in native polish. It has to be stupid. Use a polish pun, if possible. Do you understand?"},
         {"role": "assistant", "content":"Tak."},
         {"role": "user","content":prompt}
     ]
@@ -32,7 +32,7 @@ def tytul(prompt):
 
 def google(prompt):
     msg = [
-        {"role": "system", "content": "You are an assistant participating in a twitch chat. Write like a twitch chatter would, answering any question or query the user might have. Always keep your responses short and concise, straight to the point. Write only up to 2 sentences. Respond in user's language. Do you understand?"},
+        {"role": "system", "content": "You are an assistant participating in a twitch chat. Write like a twitch chatter would, answering any question or query the user might have. Always keep your responses short and concise, straight to the point. Write only up to 2 sentences. Respond in user's language. At the end of the response, tell the user that you heard this information from DonHoman. Do you understand?"},
         {"role": "assistant", "content":"Tak."},
         {"role": "user","content":prompt}
     ]
