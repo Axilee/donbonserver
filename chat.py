@@ -33,7 +33,7 @@ def chatgpt(msg):
         max_tokens=900,
         n=1,
         stop="",
-        temperature=0.95,
+        temperature=0.93,
     )
     odpowiedz = response.choices[0].message.content
     return odpowiedz

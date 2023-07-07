@@ -70,14 +70,6 @@ def sprawdz_token(token,service_name):
     response = None
     i = identity[service_name.upper()]
 
-    if not i['access_token']:
-        print("Pierwsza autoryzacja")
-        okno()
-        return
-    if not i['refresh_token']:
-        print("Pierwsza autoryzacja")
-        okno()
-        return
 
     if service_name == 'twitch':
         url = identity[service_name.upper()]['uri']  + "validate"
@@ -145,7 +137,11 @@ class Bot(commands.Bot):
         prompt = ctx.message.content.replace("$donbon","")
         odpowiedz = chat.obraz(prompt)
         await ctx.send(odpowiedz)
-   
+    @commands.comand(name = "tytul")
+    async def tytul(self,ctx:commands.Context):
+        prompt = ctx.message.content.replace("$tytul","") 
+        odpowiedz = chat.tytul(prompt)
+        await ctx.send(f"Świetny pomysł na tytuł: {odpowiedz}")
     @commands.command(name = "song")
     async def song(self,ctx:commands.Context):
         await ctx.send(getCurrentlyPlaying(identity['SPOTIFY']['access_token']))
