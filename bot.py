@@ -1,4 +1,5 @@
 import mysql.connector
+from twitchio.ext import commands
 
 connection = mysql.connector.connect(
     host = "192.168.1.3",
@@ -8,13 +9,11 @@ connection = mysql.connector.connect(
     database = "donbon"
 )
 cursor = connection.cursor()
-for i in range(1000):
-    x = i*2
-    x = [i,x]
-    q = '''
-    INSERT INTO test (test, test2) 
-    VALUES (%s,%s)
-    '''
-    cursor.execute(q,x,i)
+
+
+twitchio.Commands
+
+
+
 connection.commit()
 print (cursor.fetchall())
