@@ -141,7 +141,7 @@ class Bot(commands.Bot):
     @commands.command(name = "google")
     async def google(self, ctx: commands.Context):
         prompt = ctx.message.content.replace("$google","")
-        odpowiedz = chat.obraz(prompt)
+        odpowiedz = chat.google(prompt)
         await ctx.send(odpowiedz)
 
 
