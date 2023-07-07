@@ -29,6 +29,27 @@ def tytul(prompt):
     print(odp)
     return odp
 
+
+def google(prompt):
+    msg = [
+        {"role": "system", "content": "You are an assistant participating in a twitch chat. Write like a twitch chatter would, answering any question or query the user might have. Do you understand?"},
+        {"role": "assistant", "content":"Tak."},
+        {"role": "user","content":prompt}
+    ]
+    odp = chatgpt(msg)
+    print(odp)
+    return odp
+
+
+
+
+
+
+
+
+
+
+
 def chatgpt(msg):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",

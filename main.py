@@ -138,10 +138,18 @@ class Bot(commands.Bot):
         prompt = ctx.message.content.replace("$tytul","") 
         odpowiedz = chat.tytul(prompt)
         await ctx.send(f"Świetny pomysł na tytuł: {odpowiedz}")
+    @commands.command(name = "google")
+    async def google(self, ctx: commands.Context):
+        prompt = ctx.message.content.replace("$google","")
+        odpowiedz = chat.obraz(prompt)
+        await ctx.send(odpowiedz)
+
+
+
     @commands.command(name = "song")
     async def song(self,ctx:commands.Context):
         await ctx.send(getCurrentlyPlaying(identity['SPOTIFY']['access_token']))
-
+    
  
 
 
