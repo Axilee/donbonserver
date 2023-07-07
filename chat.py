@@ -1,8 +1,11 @@
 
 from dotenv import load_dotenv
-
+import os
 import openai
-openai.api_key = load_dotenv("key")
+load_dotenv()
+print(os.getenv("key"))
+openai.api_key = os.getenv("key")
+
 def obraz(prompt):
    
     msg = [
