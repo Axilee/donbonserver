@@ -5,9 +5,6 @@ from twitchio.ext import pubsub
 from datetime import datetime
 from twitchio.ext import commands
 import twitchio
-import win32com.client as comclt
-import win32api
-import win32con
 import configparser
 from SpotifyGrapper import getCurrentlyPlaying
 import urllib.parse
@@ -111,8 +108,7 @@ def sprawdz_token(token,service_name):
 #----------------------------------------------------------------------------------------
 
 
-wsh = comclt.Dispatch("WScript.Shell")
-ap = comclt.Dispatch("Shell.Application")
+
 class Bot(commands.Bot):
 #logowanie do IRC    
     def __init__(self):
