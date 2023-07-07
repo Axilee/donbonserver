@@ -133,7 +133,7 @@ class Bot(commands.Bot):
         prompt = ctx.message.content.replace("$donbon","")
         odpowiedz = chat.obraz(prompt)
         await ctx.send(odpowiedz)
-    @commands.comand(name = "tytul")
+    @commands.command(name = "tytul")
     async def tytul(self,ctx:commands.Context):
         prompt = ctx.message.content.replace("$tytul","") 
         odpowiedz = chat.tytul(prompt)
