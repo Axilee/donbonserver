@@ -10,9 +10,12 @@ connection = mysql.connector.connect(
 )
 cursor = connection.cursor()
 
+class Bot(commands.Bot):
+#logowanie do IRC    
+    def __init__(self):
+        super().__init__(token=ACCESS_TOKEN, prefix = PREFIX, initial_channels=INITIAL_CHANNELS)  
 
-twitchio.Commands
-
+    
 
 
 connection.commit()

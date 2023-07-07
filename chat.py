@@ -1,7 +1,8 @@
 
+from dotenv import load_dotenv
 
 import openai
-openai.api_key = "sk-"
+openai.api_key = load_dotenv("key")
 def obraz(prompt):
    
     msg = [
