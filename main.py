@@ -42,7 +42,7 @@ spotify_refresh_token = identity['SPOTIFY']['refresh_token']
 
 #dane połączenia
 
-ACCESS_TOKEN = '160g7wv175m4mjwzfpd071k5ww8pvx'
+ACCESS_TOKEN = 'amcycu2ezdo70f8no7ncibh6j9q58f'
 
 PREFIX = "$"
 

@@ -1,10 +1,7 @@
 
-from dotenv import load_dotenv
 import os
 import openai
-load_dotenv()
-print(os.getenv("key"))
-openai.api_key = os.getenv("key")
+openai.api_key = ""
 
 def obraz(prompt):
    
